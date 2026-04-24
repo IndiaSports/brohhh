@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Prediction | Exclusive Gaming Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles & Variables */
+        :root {
+            --primary-gold: #ffcc00;
+            --btn-gold-hover: #e6b800;
+            --tg-blue: #24A1DE;
+            --tg-blue-hover: #1e88c0;
+            --dark-bg: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --text-light: #ffffff;
+            --text-gray: #b3b3b3;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Running Light Animation for Gold Theme */
+        @keyframes runningLightGold {
+            0% { box-shadow: 0 0 20px rgba(255, 204, 0, 0.4), 0 0 40px rgba(255, 204, 0, 0.1) inset; }
+            50% { box-shadow: 0 0 35px rgba(255, 204, 0, 0.7), 0 0 60px rgba(255, 204, 0, 0.3) inset; }
+            100% { box-shadow: 0 0 20px rgba(255, 204, 0, 0.4), 0 0 40px rgba(255, 204, 0, 0.1) inset; }
+        }
+
+        /* Running Light Animation for Blue Theme */
+        @keyframes runningLightBlue {
+            0% { box-shadow: 0 10px 20px rgba(36, 161, 222, 0.3), 0 0 20px rgba(36, 161, 222, 0.1) inset; }
+            50% { box-shadow: 0 15px 35px rgba(36, 161, 222, 0.6), 0 0 40px rgba(36, 161, 222, 0.3) inset; }
+            100% { box-shadow: 0 10px 20px rgba(36, 161, 222, 0.3), 0 0 20px rgba(36, 161, 222, 0.1) inset; }
+        }
+
+        /* Upper Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(15, 15, 15, 0.85);
+            backdrop-filter: blur(12px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            transition: transform 0.3s var(--ease-out);
+        }
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .register-btn {
+            background-color: var(--primary-gold);
+            color: #000;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.4s var(--ease-out);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            /* Constant Running Light for Gold */
+            animation: runningLightGold 2.5s infinite var(--ease-out);
+        }
+
+        .register-btn:hover {
+            background: var(--btn-gold-hover);
+            transform: translateY(-2px) scale(1.03);
+        }
+
+        /* Profile & Center Hero Section */
+        .hero {
+            padding: 160px 20px 80px; /* Adjust for fixed nav */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            flex-grow: 1;
+        }
+
+        .main-dp-container {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .main-dp {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--primary-gold);
+            /* Constant Running Light for DP border */
+            animation: runningLightGold 3s infinite var(--ease-out);
+            transition: transform 0.4s var(--ease-out);
+        }
+        .main-dp:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #fff 30%, var(--primary-gold) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-tag {
+            color: var(--text-gray);
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        /* Telegram Button - Killer & Big */
+        .tg-btn-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .tg-btn {
+            background: var(--tg-blue);
+            color: white;
+            text-decoration: none;
+            padding: 22px 50px;
+            border-radius: 100px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: all 0.5s var(--ease-out);
+            /* Constant Running Light for Blue */
+            animation: runningLightBlue 2s infinite var(--ease-out);
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tg-btn svg {
+            transition: transform 0.4s var(--ease-out);
+            width: 32px;
+            height: 32px;
+        }
+
+        .tg-btn:hover {
+            background: var(--tg-blue-hover);
+            transform: translateY(-5px) scale(1.03);
+        }
+
+        .tg-btn:hover svg {
+            transform: translateX(5px) rotate(-10deg);
+        }
+
+        /* Mobile Adjustments (Keeps it big on mobile) */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .main-dp { width: 180px; height: 180px; border-width: 5px; }
+            .tg-btn { font-size: 1.3rem; padding: 20px 40px; }
+            .tg-btn svg { width: 28px; height: 28px; }
+            .about-tag { font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 40px; }
+            nav { padding: 15px 4%; }
+            .logo img { height: 38px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.3rem; letter-spacing: -1px;}
+            .main-dp { width: 150px; height: 150px; }
+            .tg-btn { font-size: 1.1rem; padding: 18px 30px; }
+            .register-btn { padding: 10px 20px; font-size: 14px;}
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="https://13lwin19.com/img/6007/other/035124440-30396-file_20260409035124439.webp" alt="Logo">
+        </div>
+        <a href="https://13lwin19.com/register?inviteCode=Z2NDJZN&from=web" class="register-btn">REGISTER NOW</a>
+    </nav>
+
+    <section class="hero">
+        <div class="main-dp-container">
+            <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69ebd5f2b24e54.69977046_UWtVQ4CLy8OA2ljy1vHX5wZbYkV4YMV2rLuiPn4BLC_wZ_RM_ukY5IOJrlaMypqRPddK9X0HhRJwOjESfH3shOcevVZWp1i_hBxwhm9pR6eTkPrZir52Z7pXBiy2ji4pNYFRETuvtvv0OQVoLAocDwgcxaYVhXiqqZFoHLa8K7giURAxqLBMf-ifgoIj-tweuhNmEsWSaO5_IT.jpg" alt="Dubai Prediction" class="main-dp">
+        </div>
+        
+        <h1>Dubai Prediction</h1>
+        <p class="about-tag">Exclusive Gaming Community</p>
+
+        <div class="tg-btn-container">
+            <a href="https://t.me/+mhJrR-Y4TVw5YWZl" class="tg-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                JOIN TELEGRAM NOW
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
